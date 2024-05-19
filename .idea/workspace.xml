@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69e92e43-4beb-4c0d-95c9-a7f57e0ad4bf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="69e92e43-4beb-4c0d-95c9-a7f57e0ad4bf" name="Changes" comment="add">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Artists.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/AuditLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Playlists.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Sessions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Songs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,13 +31,21 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2ghZaWRSN0kJQGzQSUWzfSAxWac" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Artists.executor": "Run",
+    "Application.AuditLog.executor": "Run",
+    "Application.Playlists.executor": "Run",
+    "Application.Sessions.executor": "Run",
+    "Application.Songs.executor": "Run",
+    "Application.Users.executor": "Run",
     "Maven.FMI-PAO-PROIECT [clean,install].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -76,11 +85,33 @@
       <option name="presentableId" value="Default" />
       <updated>1716151833707</updated>
       <workItem from="1716151834698" duration="1276000" />
-      <workItem from="1716153135153" duration="3514000" />
+      <workItem from="1716153135153" duration="6753000" />
     </task>
+    <task id="LOCAL-00001" summary="database conex.">
+      <option name="closed" value="true" />
+      <created>1716156964837</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716156964837</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add">
+      <option name="closed" value="true" />
+      <created>1716157647399</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1716157647399</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="database conex." />
+    <MESSAGE value="add" />
+    <option name="LAST_COMMIT_MESSAGE" value="add" />
   </component>
 </project>
