@@ -20,5 +20,6 @@ public class JSONExportManager {
             jsonArray.add(obj);
         }
         Files.write(Path.of(fileName), jsonArray.toJSONString().getBytes());
+        System.out.println("Playlist exported to " + fileName);
     }
 }
