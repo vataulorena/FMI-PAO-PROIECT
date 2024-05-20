@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69e92e43-4beb-4c0d-95c9-a7f57e0ad4bf" name="Changes" comment="add">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Artists.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/AuditLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Playlists.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Sessions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Songs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Paginator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/SongManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Authentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Authentication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Playlists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Playlists.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Songs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Songs.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,11 +43,13 @@
   "keyToString": {
     "Application.Artists.executor": "Run",
     "Application.AuditLog.executor": "Run",
+    "Application.Main.executor": "Run",
     "Application.Playlists.executor": "Run",
     "Application.Sessions.executor": "Run",
     "Application.Songs.executor": "Run",
     "Application.Users.executor": "Run",
     "Maven.FMI-PAO-PROIECT [clean,install].executor": "Run",
+    "Maven.FMI-PAO-PROIECT [compile].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -85,7 +88,7 @@
       <option name="presentableId" value="Default" />
       <updated>1716151833707</updated>
       <workItem from="1716151834698" duration="1276000" />
-      <workItem from="1716153135153" duration="6753000" />
+      <workItem from="1716153135153" duration="15056000" />
     </task>
     <task id="LOCAL-00001" summary="database conex.">
       <option name="closed" value="true" />
@@ -103,11 +106,30 @@
       <option name="project" value="LOCAL" />
       <updated>1716157647399</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add">
+      <option name="closed" value="true" />
+      <created>1716160422423</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1716160422423</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="database conex." />

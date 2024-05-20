@@ -5,8 +5,14 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Authentication {
+    private static int currentUserId = -1;
+    private static boolean isAdmin = false;
+    public int getCurrentUserId() {
+        return currentUserId;
+    }
+
     public boolean login(String username, String password) {
-        String sql = "SELECT password_hash FROM Users WHERE username = ?";
+        String sql = "SELECT user_id, password_hash, is_admin FROM Users WHERE username = ?";
         try (Connection conn = DatabaseConnector.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, username);
@@ -14,6 +20,8 @@ public class Authentication {
             if (rs.next()) {
                 String storedPasswordHash = rs.getString("password_hash");
                 if (storedPasswordHash.equals(password)) {
+                    currentUserId = rs.getInt("user_id");
+                    isAdmin = rs.getBoolean("is_admin");
                     System.out.println("You are now authenticated as " + username);
                     return true;
                 }
@@ -70,5 +78,28 @@ public class Authentication {
     }
     public void logout() {
         System.out.println("Successfully logged out.");
+    }
+    public boolean promote(String username) {
+        if (!isAdmin) {
+            System.out.println("Only administrators can perform this action.");
+            return false;
+        }
+
+        String sql = "UPDATE Users SET is_admin = TRUE WHERE username = ?";
+        try (Connection conn = DatabaseConnector.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, username);
+            int affectedRows = stmt.executeUpdate();
+            return affectedRows > 0;
+        } catch (SQLException e) {
+            System.err.println("Database error: " + e.getMessage());
+        }
+        return false;
+    }
+    public boolean isLoggedInAsAdmin() {
+        return isAdmin && currentUserId != -1;
+    }
+    public boolean isLoggedIn() {
+        return currentUserId != -1;
     }
 }

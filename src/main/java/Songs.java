@@ -10,9 +10,8 @@ public class Songs {
                      CREATE TABLE IF NOT EXISTS Songs (
                          song_id INT AUTO_INCREMENT PRIMARY KEY,
                          title VARCHAR(255) NOT NULL,
-                         artist_id INT NOT NULL,
-                         release_year INT,
-                         FOREIGN KEY (artist_id) REFERENCES Artists(artist_id));
+                         artist_name VARCHAR(255) NOT NULL,
+                         release_year INT);
                      """)) {
             stmt.executeUpdate();
             System.out.println("Table created successfully.");
@@ -20,15 +19,16 @@ public class Songs {
             System.err.println("Database error: " + e.getMessage());
         }
     }
-    private void insertSong(String title, int artistId, int releaseYear) {
+
+    private void insertSong(String title, String artistName, int releaseYear) {
         try (Connection conn = DatabaseConnector.getConnection();
              PreparedStatement stmt = conn.prepareStatement(
-                     "INSERT INTO Songs(title, artist_id, release_year) VALUES (?, ?, ?)")) {
+                     "INSERT INTO Songs(title, artist_name, release_year) VALUES (?, ?, ?)")) {
             stmt.setString(1, title);
-            stmt.setInt(2, artistId);
+            stmt.setString(2, artistName);
             stmt.setInt(3, releaseYear);
             stmt.executeUpdate();
-            System.out.println("Song " + title + " inserted successfully.");
+            System.out.println("Song " + title + " by " + artistName + " added to the library.");
         } catch (SQLException e) {
             System.err.println("Database error: " + e.getMessage());
         }
@@ -37,10 +37,10 @@ public class Songs {
     public static void main(String[] args) {
         Songs songs = new Songs();
         songs.createTable();
-        songs.insertSong("Beggin'", 1, 2021); // Assuming artist_id 1 is Maneskin
-        songs.insertSong("Lose You to Love Me", 2, 2019); // Assuming artist_id 2 is Selena Gomez
-        songs.insertSong("Diamonds", 3, 2012); // Assuming artist_id 3 is Rihanna
-        songs.insertSong("Lover", 4, 2019); // Assuming artist_id 4 is Taylor Swift
-        songs.insertSong("Treat You Better", 5, 2020); // Assuming artist_id 5 is Shawn Mendes
+        songs.insertSong("Beggin'", "Maneskin", 2021);
+        songs.insertSong("Lose You to Love Me", "Selena Gomez", 2019);
+        songs.insertSong("Diamonds", "Rihanna", 2012);
+        songs.insertSong("Lover", "Taylor Swift", 2019);
+        songs.insertSong("Treat You Better", "Shawn Mendes", 2020);
     }
 }

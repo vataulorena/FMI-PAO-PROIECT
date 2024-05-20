@@ -1,9 +1,10 @@
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Playlists {
-    private void createTable() {
+    public void createTable() {
         try (Connection conn = DatabaseConnector.getConnection();
              PreparedStatement stmt = conn.prepareStatement(
                      """
@@ -20,19 +21,35 @@ public class Playlists {
             System.err.println("Database error: " + e.getMessage());
         }
     }
-    private void insertPlaylist(int userId, String name) {
-        try (Connection conn = DatabaseConnector.getConnection();
-             PreparedStatement stmt = conn.prepareStatement(
-                     "INSERT INTO Playlists(user_id, name) VALUES (?, ?)")) {
-            stmt.setInt(1, userId);
-            stmt.setString(2, name);
-            stmt.executeUpdate();
-            System.out.println("Playlist " + name + " inserted successfully.");
-        } catch (SQLException e) {
-            System.err.println("Database error: " + e.getMessage());
+    public void insertPlaylist(int userId, String name) {
+        if (!playlistExists(userId, name)) {
+            try (Connection conn = DatabaseConnector.getConnection();
+                 PreparedStatement stmt = conn.prepareStatement(
+                         "INSERT INTO Playlists(user_id, name) VALUES (?, ?)")) {
+                stmt.setInt(1, userId);
+                stmt.setString(2, name);
+                stmt.executeUpdate();
+                System.out.println("Playlist " + name + " created successfully.");
+            } catch (SQLException e) {
+                System.err.println("Database error: " + e.getMessage());
+            }
+        } else {
+            System.out.println("You already have a playlist named " + name);
         }
     }
-
+    private boolean playlistExists(int userId, String name) {
+        try (Connection conn = DatabaseConnector.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(
+                     "SELECT playlist_id FROM Playlists WHERE user_id = ? AND name = ?")) {
+            stmt.setInt(1, userId);
+            stmt.setString(2, name);
+            ResultSet rs = stmt.executeQuery();
+            return rs.next();
+        } catch (SQLException e) {
+            System.err.println("Database error: " + e.getMessage());
+            return false;
+        }
+    }
     public static void main(String[] args) {
         Playlists playlists = new Playlists();
         playlists.createTable();
