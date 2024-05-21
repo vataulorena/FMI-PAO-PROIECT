@@ -122,13 +122,14 @@ public class Main {
                             String identifier = scanner.nextLine().trim();
                             System.out.println("Enter export format (csv or json):");
                             String format = scanner.nextLine().trim();
+                            ExportType exportType = "csv".equalsIgnoreCase(format) ? ExportType.CSV : ExportType.JSON;
                             boolean isByName = !identifier.matches("\\d+");
                             List<String[]> songs = playlistDataService.getPlaylistSongs(identifier, isByName, auth.getCurrentUserId());
                             if (songs.isEmpty()) {
                                 System.out.printf("Playlist %s does not exist!\n", identifier);
-                            } else if ("csv".equalsIgnoreCase(format)) {
+                            } else if (exportType == ExportType.CSV) {
                                 csvExportManager.exportToCSV(songs, identifier, auth.getCurrentUsername());
-                            } else if ("json".equalsIgnoreCase(format)) {
+                            } else if (exportType == ExportType.JSON) {
                                 jsonExportManager.exportToJSON(songs, identifier, auth.getCurrentUsername());
                             } else {
                                 System.out.println("Unsupported format. Only 'csv' or 'json' are allowed.");
