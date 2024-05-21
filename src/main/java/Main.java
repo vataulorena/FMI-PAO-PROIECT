@@ -1,3 +1,5 @@
+import exception.InvalidCommandException;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
@@ -159,8 +161,7 @@ public class Main {
                         scanner.close();
                         return;
                     default:
-                        System.out.println("Unknown command! Please enter a valid command.");
-                        break;
+                        throw new InvalidCommandException();
                 }
                 if (cmd != null) {
                     success = cmd.execute();
