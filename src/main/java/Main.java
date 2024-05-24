@@ -104,7 +104,7 @@ public class Main {
                         break;
                     case "search":
                         if (auth.isLoggedIn()) {
-                            System.out.println("Specify the search criterion type (artist or name):");
+                            System.out.println("Specify the search criterion type (author or name):");
                             String criterionType = scanner.nextLine().trim();
                             System.out.println("Enter search term:");
                             String searchTerm = scanner.nextLine().trim();

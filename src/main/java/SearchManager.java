@@ -35,22 +35,7 @@ public class SearchManager {
             System.err.println("Database error: " + e.getMessage());
         }
     }
-    public void handleSearch(String searchParameters) {
-        try {
-            String[] params = searchParameters.split(" ", 2);
-            String type = params[0];
-            String criterion = params[1].replace("\"", "");
-            int page = 1;
-            int itemsPerPage = 5;
-            if (criterion.matches(".* \\d+$")) {
-                page = Integer.parseInt(criterion.substring(criterion.lastIndexOf(' ') + 1));
-                criterion = criterion.substring(0, criterion.lastIndexOf(' '));
-            }
-            searchSongs(type, criterion, page, itemsPerPage);
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Please specify a search type and a criterion.");
-        }
-    }
+
     private int getTotalRowCount(String type, String criterion) {
         String field = type.equals("author") ? "artist_name" : "title";
         String sql = "SELECT COUNT(*) FROM Songs WHERE " + field + " LIKE ?";

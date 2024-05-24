@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="69e92e43-4beb-4c0d-95c9-a7f57e0ad4bf" name="Changes" comment="add">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/JSONExportManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JSONExportManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Paginator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Paginator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SearchManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SearchManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +19,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -71,6 +71,11 @@
     ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -87,7 +92,7 @@
       <option name="presentableId" value="Default" />
       <updated>1716151833707</updated>
       <workItem from="1716151834698" duration="1276000" />
-      <workItem from="1716153135153" duration="30105000" />
+      <workItem from="1716153135153" duration="34745000" />
     </task>
     <task id="LOCAL-00001" summary="database conex.">
       <option name="closed" value="true" />
@@ -129,7 +134,39 @@
       <option name="project" value="LOCAL" />
       <updated>1716227107436</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add">
+      <option name="closed" value="true" />
+      <created>1716230407119</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1716230407119</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add">
+      <option name="closed" value="true" />
+      <created>1716297652923</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1716297652923</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add invalid command exception">
+      <option name="closed" value="true" />
+      <created>1716297684376</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1716297684378</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add">
+      <option name="closed" value="true" />
+      <created>1716298293762</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1716298293762</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,6 +185,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="database conex." />
+    <MESSAGE value="add invalid command exception" />
     <MESSAGE value="add" />
     <option name="LAST_COMMIT_MESSAGE" value="add" />
   </component>
